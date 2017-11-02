@@ -1,8 +1,8 @@
 {
-  "title": "Shop Item",
+  "title": "Insectodex",
   "name": "startbootstrap-shop-item",
   "version": "4.0.0-beta.2",
-  "description": "A shop item HTML template built with Bootstrap",
+  "description": "Insects of Arizona",
   "keywords": [
     "css",
     "sass",
@@ -30,7 +30,8 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "browser-sync": "2.18.13",
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
   }
 }
