@@ -1,5 +1,5 @@
 var insects = [{
-    photo: "images/carpenterbee.jpg",
+    photo: "images/figbeetle.jpg",
     commonname: "Fig Beetle",
     genus: "Continus",
     species: "mutabilis",
@@ -8,7 +8,7 @@ var insects = [{
     generalinfo: "Look for them on fruit trees, fruiting cacti, and on mesquite and other trees (whose sap they feed on). They can sometimes be seen flying in large numbers around mesquite trees. Look for the larvae in compost piles."
 
   },{
-    photo: "images/figbeetle.jpg",
+    photo: "images/carpenterbee.jpg",
     commonname: "Carpenter Bee",
     genus: "Xylocopa californica",
     species: "arizonensis",
@@ -23,19 +23,38 @@ var insects = [{
     seasons: "June to July",
     diet: "larvae feed on aspen, willows, wild cherry, and ash. Adults feed on flower nectar",
     generalinfo: "Males patrol canyons or hilltops for receptive females. Females lay eggs singly on surface of host plant leaves. Caterpillars feed on leaves and rest on silken mats in shelters of curled leaves. Chrysalids hibernate." 
+  }, { 
+    photo: "images/polistes.jpg",
+    commonname: "Paper Wasp",
+    genus: "Polistes",
+    species: "spp.",
+    seasons: "spring to fall",
+    diet: "These eusocial wasps are predaceous eating caterpillars for their young and eat flower nectar. The nests are made of chewed wood pulp",
+    generalinfo: "If you find one of their fascinating nests, observe it but do not get too close, and do not disturb it. These wasps have a painful sting and will aggressively defend their nest if they need to."    
+  }, { 
+    photo: "images/leafcutterant.jpg",
+    commonname: "Leafcutter Ants",
+    genus: "Acromymrex",
+    species: "versicolor",
+    seasons: "All season(mating season in August)",
+    diet: "Leafcutter ants collect plant parts (leaves, flowers, etc.) on which they grow a specialized fungus, which they then eat. This is a classic example of a mutualism, in which two species live together and benefit from each other.",
+    generalinfo: "Look for trails of the workers collecting leaves from mesquite or other plants. Look also for the nest mounds, which are frequently shaped like small volcanoes and can get up to a foot tall. These ants do not bite or sting." 
+
   }]
 
   
   var insectIndex = document.querySelectorAll(".list-group-item")
   var insectPicture = document.querySelector(".card-img-top")
-  var insectName = document.querySelector(".card-title", ".list-group-item")
+  var insectName = document.querySelector(".card-title")
   var insectGenus = document.querySelector(".card-genus")
   var insectSeasons = document.querySelector(".card-seasons")
   var insectDiet = document.querySelector(".card-diet")
   var insectText= document.querySelector(".card-text")
 
+
   console.log(insectIndex)
 for (let i = 0; i < insectIndex.length; i++) {
+    
   insectIndex[i].addEventListener("click", function() {
     var insect = insects[i]
     insectPicture.src = insect.photo
@@ -43,13 +62,17 @@ for (let i = 0; i < insectIndex.length; i++) {
     insectGenus.innerHTML = insect.genus + " " + insect.species
     insectSeasons.innerHTML = "Seasons: " + insect.seasons
     insectDiet.innerHTML = "Diet: " + insect.diet
-    insectText.innerHTML = insect.generalinfo
+    insectText.innerHTML = "General Info: " + insect.generalinfo
   })
 }
 
 function setInitalState() {
-
-  var insect = insects[0]    
+// for(let i = 0; i < insectIndex.length; i++) {
+//   var insectList = document.createElement(".list-group")  
+//   insectList.innerHTML = insect.commonname
+//   list-group.appendchild(insectList)
+// }
+  var insect = insects[0]  
   insectPicture.src = insect.photo
   insectName.innerHTML = "Common Name:  " + insect.commonname
   insectGenus.innerHTML = insect.genus + " " + insect.species

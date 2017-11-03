@@ -7,17 +7,21 @@
 body {
   padding-top: 54px;
   font-family: 'Open Sans', sans-serif;
+  background-image: url(/images/sedona.jpg) no-repeat center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 600px) {
   body {
-    background-image: url(/images/sedona.jpg) no-repeat center;
     padding-top: 56px;
   }
 }
 
 p {
   font-size: 1.6 rem;
+}
+
+.container {
+  background-image: url(/images/sedona.jpg) no-repeat center;
 }
 
 
@@ -57,12 +61,18 @@ p {
 
  /*-- Copyright Footer --*/
 .footer-wrapper {
-	text-align: center;
+  text-align: center;
+}
+
+#copyright {
+  text-align: center;  
 }
 
 #copyright p {
   padding: 20px 0;
   color: rgb(255, 255, 255);
+  width: 40%;
+  margin: auto;
 }
 
 #copyright a {
@@ -82,8 +92,6 @@ p {
 	color: rgb(165, 166, 167);
 	text-decoration: underline;
 }
-
-
 
   /*-- End of Copyright Footer --*/
 
